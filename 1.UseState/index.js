@@ -1,15 +1,15 @@
 import React, {useState} from "react";
-import { ReactDOM } from "react-dom";
+import ReactDOM from "react-dom";
 
 const App = () => {
     const [item, setItem] = useState(1);
-    const incrementltem = setltem(item + 1);
-    const decrementltem = setltem(item - 1);
+    const incrementItem = () => setItem(item + 1);
+    const decrementItem = () => setItem(item - 1);
     return (
         <div className="App">
             <h1>Hello {item}</h1>
-            <button onClick={this.incrementltem}>incrementltem</button>
-            <button onClick={this.decrementltem}>decrementltem</button>
+            <button onClick={incrementItem}>incrementltem</button>
+            <button onClick={decrementItem}>decrementltem</button>
         </div>
     )
 }
@@ -23,8 +23,8 @@ class AppUgly extends React.Component{
         return (
             <div className="App">
                 <h1>Hello {item}</h1>
-                <button onClick={incrementltem}>incrementltem</button>
-                <button onClick={decrementltem}>decrementltem</button>
+                <button onClick={this.incrementItem}>Incrementltem</button>
+                <button onClick={this.decrementItem}>Decrementltem</button>
             </div>
         );
     }
@@ -42,7 +42,7 @@ class AppUgly extends React.Component{
             };
         });
     };
-}
+};
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
